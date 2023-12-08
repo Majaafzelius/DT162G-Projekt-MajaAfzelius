@@ -6,7 +6,7 @@ const Item = require('./models/item');
 const app = express();
 const port = 3000;
 
-mongoose.connect('mongodb://localhost/din-databas', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/27017/DT162G', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -23,7 +23,7 @@ router.get('/items', async (req, res) => {
   }
 });
 
-Router.get('/items/:id', async (req, res) => {
+router.get('/items/:id', async (req, res) => {
       console.log("route test");
 });
 
