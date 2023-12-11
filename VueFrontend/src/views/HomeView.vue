@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Recipes</h2>
+    <h2>Recept</h2>
     <ul>
       <li v-for="recipe in recipes" :key="recipe._id">
         <router-link :to="{ name: 'RecipeDetails', params: { id: recipe._id }}">
@@ -35,18 +35,16 @@ export default {
         });
     },
 
-    deleteRecipe(id) {
-      DataService.deleteRecipe(id)
-        .then(() => {
-          this.fetchRecipes();
-        })
-        .catch((error) => {
-          console.error('Error deleting recipe:', error);
-        });
-    },
+    
   },
 };
 </script>
+
+<style>
+  li {
+    list-style-type: none;
+  }
+</style>
 
 
 

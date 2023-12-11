@@ -15,8 +15,12 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
-li {
-  list-style-type: none;
-}
+<style>
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  h1,h2,h3,h4 {
+    color: rgb(0, 0, 0);
+  }
+  
 </style>
