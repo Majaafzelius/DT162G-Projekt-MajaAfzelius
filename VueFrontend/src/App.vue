@@ -7,8 +7,8 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
 
       <nav>
-        <RouterLink to="/">Hem</RouterLink>
-        <RouterLink to="/add">Lägg till Recept</RouterLink>
+        <RouterLink to="/" class="nav-item">Hem</RouterLink>
+        <RouterLink to="/add" class="nav-item">Lägg till Recept</RouterLink>
       </nav>
     </div>
   </header>
@@ -22,6 +22,9 @@ import { RouterLink, RouterView } from 'vue-router'
   }
   h1,h2,h3,h4 {
     color: rgb(0, 0, 0);
+  }
+  .nav-item {
+    margin: 10px;
   }
   
 </style>

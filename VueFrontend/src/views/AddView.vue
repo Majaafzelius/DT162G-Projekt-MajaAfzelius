@@ -48,8 +48,7 @@
                 recipePicture: '',
                 recipeTime: '',
             };
-            // Eventuellt: Uppdatera receptlistan genom att hämta data på nytt
-            // this.getRecipes();
+            
           })
           .catch((error) => {
             console.error('Error adding recipe:', error);

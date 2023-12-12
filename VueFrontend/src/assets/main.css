@@ -20,16 +20,32 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
+@media screen and (max-width:800px){
+  
+  
+}
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
+@media screen and (min-width:801px) and (max-width:1024px) {
+  ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    grid-template-columns: auto auto;
+  }
+  li {
+    max-width: 90%;
+    max-height: 250px;
   }
 }
+
+@media (min-width: 1024px) {
+  ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  li {
+    max-width: 90%;
+    max-height: 300px;
+  }
+
+}
+
+

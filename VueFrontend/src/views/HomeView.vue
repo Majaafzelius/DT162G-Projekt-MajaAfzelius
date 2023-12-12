@@ -6,7 +6,7 @@
         <router-link :to="{ name: 'RecipeDetails', params: { id: recipe._id }}">
           <img v-if="recipe.recipePicture" :src="recipe.recipePicture" alt="Recipe Image" class="img"/>
           <h3>{{ recipe.recipeName }}</h3>
-          <p v-if="recipe.recipeTime">Time: {{ recipe.recipeTime }}</p>
+          <p v-if="recipe.recipeTime">Tid: {{ recipe.recipeTime }}</p>
         </router-link>
       </li>
     </ul>
@@ -43,14 +43,18 @@ export default {
 <style scoped>
   li {
     list-style-type: none;
+    align-self: start;
+    margin: 10px;
+
   }
   .img {
-    max-height: 200px;
+    width: 100%;
   }
-  ul {
-    display: grid;
-    grid-template-columns: auto auto;
+  h2 {
+    text-align: center;
   }
+  
+  
 </style>
 
 
