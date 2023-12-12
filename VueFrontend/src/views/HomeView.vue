@@ -4,7 +4,7 @@
     <ul>
       <li v-for="recipe in recipes" :key="recipe._id">
         <router-link :to="{ name: 'RecipeDetails', params: { id: recipe._id }}">
-          <img v-if="recipe.recipePicture" :src="recipe.recipePicture" alt="Recipe Image" />
+          <img v-if="recipe.recipePicture" :src="recipe.recipePicture" alt="Recipe Image" class="img"/>
           <h3>{{ recipe.recipeName }}</h3>
           <p v-if="recipe.recipeTime">Time: {{ recipe.recipeTime }}</p>
         </router-link>
@@ -40,9 +40,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   li {
     list-style-type: none;
+  }
+  .img {
+    max-height: 200px;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: auto auto;
   }
 </style>
 

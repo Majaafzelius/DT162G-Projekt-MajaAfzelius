@@ -2,7 +2,8 @@
   <div>
     <h2>{{ recipe.recipeName }}</h2>
     <p v-if="recipe.recipeTime">Time: {{ recipe.recipeTime }}</p>
-    <img v-if="recipe.recipePicture" :src="recipe.recipePicture" alt="Recipe Image" />
+    <img v-if="recipe.recipePicture" :src="recipe.recipePicture" alt="Recipe Image" class="full_img"/>
+    <p>{{ recipe.recipeIngrediens }}</p>
     <p>{{ recipe.recipeInstruction }}</p>
     <button @click="() => deleteRecipe()">Delete Recipe</button>
   </div>
@@ -50,5 +51,9 @@ export default {
 <style scoped>
   h1,h2,h3,h4,p{
     color: rgb(0, 0, 0);
+  }
+
+  .full_img {
+    max-height: 300px;
   }
 </style>
