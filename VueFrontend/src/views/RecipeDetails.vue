@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h2 v-if="!isEditing">{{ recipe.recipeName }}</h2>
     <input v-if="isEditing" v-model="editedRecipeName" type="text" /><br>
     
@@ -25,10 +25,10 @@
       rows="10"
     ></textarea><br>
     
-    <button @click="() => deleteRecipe()">Ta bort recept</button><br>
+    <button @click="() => deleteRecipe()" class="deletebtn">Ta bort recept</button><br>
     
-    <button v-if="!isEditing" @click="toggleEditing">Uppdatera Recept</button>
-    <button v-if="isEditing" @click="saveUpdatedRecipe">Spara Uppdatering</button>
+    <button v-if="!isEditing" @click="toggleEditing" class="updatebtn">Uppdatera Recept</button>
+    <button v-if="isEditing" @click="saveUpdatedRecipe" class="updatebtn">Spara Uppdatering</button>
   </div>
 </template>
 
@@ -120,5 +120,32 @@ export default {
 
   .full_img {
     max-height: 300px;
+  }
+
+  .deletebtn {
+    background-color: rgb(241, 148, 148);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(78, 78, 78);
+    margin-bottom: 10px;
+  }
+  .deletebtn:hover {
+    background-color: rgb(211, 80, 80);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(78, 78, 78);
+    margin-bottom: 10px;
+  }
+  .updatebtn {
+    background-color: rgb(148, 212, 241);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(78, 78, 78);
+  }
+  .updatebtn:hover {
+    background-color: rgb(75, 170, 214);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(78, 78, 78);
   }
 </style>

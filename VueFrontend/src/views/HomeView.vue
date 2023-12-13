@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h2>Recept</h2>
     <ul>
       <li v-for="recipe in recipes" :key="recipe._id">
@@ -48,7 +48,7 @@ export default {
 
   }
   .img {
-    width: 100%;
+    max-width: 100%;
   }
   h2 {
     text-align: center;
