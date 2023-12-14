@@ -13,7 +13,6 @@
         },
 
         createRecipe(recipeData) {
-            console.log(recipeData);
             return axios.post(`${apiUrl}/recipes`, recipeData);
         },
 
